@@ -19,6 +19,7 @@ import { AddCharacterComponent } from './components/add-character/add-character.
   ],
   imports: [
     CommonModule,
+    // Este FormsModule es el que se importa para poder usar ngModel en add-charactr.component.ts
     FormsModule
   ]
 })

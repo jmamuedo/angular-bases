@@ -8,19 +8,20 @@ import { DbzService } from '../services/dbz.service';
 })
 
 export class MainPageComponent {
-
+  //esto me permite coger toda la información que esté emitiendo el Servicio
   constructor( private dbzService: DbzService){}
 
-    get characters(): Character[] {
-      return[...this.dbzService.characters];
-    }
+  get characters(): Character[] {
+    // los puntos suspensivos hacen como una copia e los carateres que yo tenga en el Servicio
+    return[...this.dbzService.characters];
+  }
 
-    onDeleteCharacter( id: string ):void{
-      this.dbzService.deleteCharacterById(id);
-    }
+  onDeleteCharacter( id: string ):void{
+    this.dbzService.deleteCharacterById(id);
+  }
 
-    onNewCharacter( characters: Character ):void {
-      this.dbzService.addCharacter(characters);
-    }
+  onNewCharacter( characters: Character ):void {
+    this.dbzService.addCharacter(characters);
+  }
 
 }

@@ -29,6 +29,7 @@ export class DbzService {
   addCharacter( character: Character):void {
 
     const newCharacter: Character = {
+      // Con esta sintaxis podemos añadir todas las propiedades ...character
       id: uuid(), ...character
     }
 

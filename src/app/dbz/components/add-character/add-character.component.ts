@@ -7,7 +7,8 @@ import { Character } from '../../interfaces/character.interface';
   styleUrls: ['./add-character.component.css']
 })
 export class AddCharacterComponent {
-
+// el Putput es el que me permite lanzar cosas fuera
+// y eventEmitter es el que emite estrictamente los datos
   @Output()
   onNewCharacter: EventEmitter<Character> = new EventEmitter();
 
